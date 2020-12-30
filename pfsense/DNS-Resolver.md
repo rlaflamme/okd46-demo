@@ -43,6 +43,7 @@ local-data-ptr: "10.10.1.50 api-int.lab.okd.local"
 |okd4-control-plane-1|lab.okd.local|10.10.1.20|control-plane-1|
 |okd4-control-plane-2|lab.okd.local|10.10.1.21|control-plane-2|
 |okd4-control-plane-3|lab.okd.local|10.10.1.22|control-plane-3|
+|okd4-services|lab.okd.local|10.10.1.50|haproxy,nfs,apache,kubectl,oc|
 
 ## Advanced Settings
 - Defaults (Leave as-is)
