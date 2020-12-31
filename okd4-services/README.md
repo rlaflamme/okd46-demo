@@ -1,24 +1,24 @@
-#Setup
+# Setup
 
 
 dnf -y install haproxy httpd nfs-utils net-tools git wget ntp tree 
 
 
-##selinux permissive
+## selinux permissive
 vi /etc/selinux/config
 replace enforcing -> permissive
 
-#HAProxy setup
+# HAProxy setup
 cd  /etc/haproxy
 cp -p /root/okd46-demo/haproxy/haproxy.cfg .
 
 
-##Setup NFS
+## Setup NFS
 echo '/var/nfsshare 10.10.1.0/24(rw,sync,no_root_squash,no_all_squash,no_wdelay)' | sudo tee /etc/exports
-###Test
+### Test
 exportfs
 
-##Emable services
+## Enable services
 systemctl enable --now rpcbind nfs-server 
 systemctl enable --now haproxy
 systemctl enable --now httpd
