@@ -8,7 +8,7 @@ dnf -y install haproxy httpd nfs-utils net-tools git wget ntp tree
 vi /etc/selinux/config
 replace enforcing -> permissive
 
-# HAProxy setup
+## HAProxy setup
 cd  /etc/haproxy
 cp -p /root/okd46-demo/haproxy/haproxy.cfg .
 
