@@ -27,6 +27,12 @@ local-data-ptr: "10.10.1.50 api.lab.okd.local"
 local-data-ptr: "10.10.1.50 api-int.lab.okd.local"
 ```
 
+### Fake gologic.ca
+```
+local-zone: "dev.gologic.ca" redirect
+local-data: "dev.gologic.ca IN A 10.10.1.55"
+```
+
 ### Host Overrides
 
 |Host|Parent domain of host|IP return for host|Description|
